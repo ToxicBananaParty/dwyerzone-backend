@@ -3,17 +3,30 @@ import tseslint from "typescript-eslint";
 import prettierConfig from "eslint-config-prettier";
 import prettierPlugin from "eslint-plugin-prettier";
 
-export default tseslint.config({ ignores: ['**/dist/**']}, {
-    extends: [js.configs.recommended, ...tseslint.configs.recommended, prettierConfig],
-    files: ['**/*.ts'],
-    languageOptions: {
-        ecmaVersion: 2022,
+export default tseslint.config(
+    { ignores: ["./packages/*/dist"] },
+    {
+        extends: [
+            js.configs.recommended,
+            ...tseslint.configs.recommended,
+            prettierConfig,
+        ],
+        languageOptions: {
+            ecmaVersion: 2022,
+            parserOptions: {
+                tsconfigRootDir: import.meta.dirname,
+                projectService: {
+                    allowDefaultProject: ["./eslint.config.js"],
+                    defaultProject: "tsconfig.base.json",
+                },
+            },
+        },
+        plugins: {
+            prettier: prettierPlugin,
+        },
+        rules: {
+            quotes: ["error", "double"],
+            "prettier/prettier": "error",
+        },
     },
-    plugins: {
-        'prettier': prettierPlugin,
-    },
-    rules: {
-        'quotes': ['error', 'double'],
-        'prettier/prettier': 'error',
-    },
-});
+);

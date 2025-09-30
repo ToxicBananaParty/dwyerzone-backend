@@ -1,5 +1,6 @@
 {
     "files": [],
+    "include": ["./eslint.config.js"],
     "references": [{
         "path": "packages/big-boss"
     }, {
