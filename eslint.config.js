@@ -17,7 +17,7 @@ export default tseslint.config(
                 tsconfigRootDir: import.meta.dirname,
                 projectService: {
                     allowDefaultProject: ["./eslint.config.js"],
-                    defaultProject: "tsconfig.base.json",
+                    defaultProject: "./tsconfig.base.json",
                 },
             },
         },
