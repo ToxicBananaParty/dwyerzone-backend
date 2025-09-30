@@ -1,10 +1,11 @@
 import rooms from "./rooms/index.js";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function stringifyMaxDepth(obj: any, depth: number, spaces: number): string {
     // recursion limited by depth arg
     if (!obj || typeof obj !== "object") return JSON.stringify(obj);
 
-    let curDepthResult = '"<?>"'; // too deep
+    let curDepthResult = "<?>"; // too deep
     if (depth > 0) {
         curDepthResult = Object.keys(obj)
             .map((key) => {
