@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc -b",
     "format": "prettier --log-level warn --config .prettierrc --ignore-path .prettierignore --write packages/",
-    "lint": "prettier --check --log-level warn --config .prettierrc --ignore-path .prettierignore packages/ && eslint packages/ --max-warnings=0 --config eslint.config.js"
+    "lint": "prettier --check --log-level warn --config .prettierrc --ignore-path .prettierignore packages/ && eslint packages/ --max-warnings=0 --config eslint.config.js",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
