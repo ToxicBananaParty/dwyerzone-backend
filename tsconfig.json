@@ -1,0 +1,10 @@
+{
+    "files": [],
+    "references": [{
+        "path": "packages/big-boss"
+    }, {
+        "path": "packages/solid-snake"
+    }, {
+        "path": "packages/the-boss"
+    }]
+}
