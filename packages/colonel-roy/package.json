@@ -1,17 +1,17 @@
 {
-  "name": "@smarthome/colonel-roy",
-  "version": "1.0.0",
-  "main": "dist/index.js",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "socket.io": "^4.8.1",
-    "@smarthome/common": "^1.0.0"
-  }
+    "name": "@smarthome/colonel-roy",
+    "version": "1.0.0",
+    "main": "dist/index.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+        "socket.io": "^4.8.1",
+        "@smarthome/common": "^1.0.0"
+    }
 }
