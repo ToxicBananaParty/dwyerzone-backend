@@ -1,10 +1,8 @@
-import "@smarthome/common";
+import { COLONEL_ROY_PORT } from "@smarthome/common";
+import { type ColonelRoyClient } from "@smarthome/common/dist/lib/monitor.js";
 import { createServer } from "http";
 import { Server } from "socket.io";
-
-const PORT = process.env.COLONEL_ROY_PORT
-    ? Number(process.env.COLONEL_ROY_PORT)
-    : 3000;
+import { registerClient } from "./client.js";
 
 const server = createServer();
 const io = new Server(server);
@@ -19,8 +17,19 @@ io.on("connection", (socket) => {
             "Snake! This is the Colonel.... A connection has been terminated",
         );
     });
+
+    socket.on("register", (clientInfo: ColonelRoyClient, callback) => {
+        registerClient(clientInfo);
+        console.log(
+            `Snake! This is the Colonel.... ${clientInfo.name} has registered successfully!`,
+        );
+        callback();
+    });
 });
 
-server.listen(PORT, undefined, undefined, () => {
-    console.log("Snake! This is the Colonel.... I'm listening on port " + PORT);
+server.listen(COLONEL_ROY_PORT, undefined, undefined, () => {
+    console.log(
+        "Snake! This is the Colonel.... I'm listening on port " +
+            COLONEL_ROY_PORT,
+    );
 });
