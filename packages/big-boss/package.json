@@ -13,6 +13,6 @@
     "dependencies": {
         "@smarthome/common": "^1.0.0",
         "@smarthome/solid-snake": "^1.0.0",
-        "socket.io": "^4.8.1"
+        "socket.io-client": "^4.8.1"
     }
 }
