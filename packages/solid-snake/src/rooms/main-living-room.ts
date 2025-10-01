@@ -1,5 +1,5 @@
-import RoomType, { type Room } from "../lib/room.js";
-import DeviceType, { type Device } from "../lib/device.js";
+import RoomType, { type Room } from "@smarthome/common/dist/lib/room.js";
+import DeviceType, { type Device } from "@smarthome/common/dist/lib/device.js";
 
 const MAIN_LIVING_ROOM: Room = {
     type: RoomType.LivingRoom,

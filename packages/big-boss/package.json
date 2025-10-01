@@ -11,6 +11,7 @@
     "license": "ISC",
     "description": "",
     "dependencies": {
-        "@smarthome/solid-snake": "^1.0.0"
+        "@smarthome/solid-snake": "^1.0.0",
+        "@smarthome/common": "^1.0.0"
     }
 }

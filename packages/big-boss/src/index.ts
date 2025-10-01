@@ -1,2 +1,2 @@
 import "@smarthome/solid-snake";
-console.log("Hello, Big Boss!");
+console.log("Hello, big boss!");

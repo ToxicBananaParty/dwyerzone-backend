@@ -1,11 +1,13 @@
 {
     "compilerOptions": {
         "target": "es2022",
-        "module": "esnext",
         "skipLibCheck": true,
 
         "verbatimModuleSyntax": true,
         "moduleDetection": "force",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
 
         "strict": true,
         "sourceMap": true,
@@ -16,5 +18,7 @@
         "declarationMap": true,
         "incremental": true,
         "noEmitOnError": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
     }
 }

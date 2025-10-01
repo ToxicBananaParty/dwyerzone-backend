@@ -18,7 +18,9 @@
   "workspaces": [
     "packages/solid-snake",
     "packages/big-boss",
-    "packages/the-boss"
+    "packages/the-boss",
+    "packages/colonel-roy",
+    "packages/common"
   ],
   "devDependencies": {
     "@eslint/js": "^9.36.0",

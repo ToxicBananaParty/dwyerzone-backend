@@ -5,7 +5,8 @@ function stringifyMaxDepth(obj: any, depth: number, spaces: number): string {
     // recursion limited by depth arg
     if (!obj || typeof obj !== "object") return JSON.stringify(obj);
 
-    let curDepthResult = "<?>"; // too deep
+    // eslint-disable-next-line quotes
+    let curDepthResult = '"<?>"'; // too deep
     if (depth > 0) {
         curDepthResult = Object.keys(obj)
             .map((key) => {

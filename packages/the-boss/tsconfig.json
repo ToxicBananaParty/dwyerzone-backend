@@ -3,7 +3,7 @@
     "include": ["./src/**/*.ts"],
     "compilerOptions": {
         "outDir": "./dist",
-        "rootDir": "./src"
+        "rootDir": "./src",
     },
-    "references": [{ "path": "../solid-snake" }]
+    "references": [{ "path": "../solid-snake" }, { "path": "../common" }]
 }

@@ -7,5 +7,9 @@
         "path": "packages/solid-snake"
     }, {
         "path": "packages/the-boss"
+    }, {
+        "path": "packages/colonel-roy"
+    }, {
+        "path": "packages/common"
     }]
 }
