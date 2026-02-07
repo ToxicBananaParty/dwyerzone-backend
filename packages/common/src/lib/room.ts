@@ -1,6 +1,6 @@
-import type { Device } from "./device.js";
+import type { Device } from "./device";
 
-enum RoomType {
+export enum RoomType {
     LivingRoom = "LIVING_ROOM",
     Kitchen = "KITCHEN",
     MasterBedroom = "MASTER_BEDROOM",
@@ -18,5 +18,3 @@ export type Room = {
     readonly bordering: Room[];
     readonly id: string;
 };
-
-export default RoomType;

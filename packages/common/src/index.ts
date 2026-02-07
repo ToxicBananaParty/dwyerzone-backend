@@ -6,8 +6,8 @@ export const COLONEL_ROY_PORT = process.env.COLONEL_ROY_PORT
     : 3000;
 export const MONITOR_ADDR = `ws://localhost:${COLONEL_ROY_PORT}`;
 
-export { default as RoomType } from "./lib/room.js";
-export type { Room } from "./lib/room.js";
-export { default as DeviceType } from "./lib/device.js";
-export type { Device } from "./lib/device.js";
-export type { ColonelRoyClient } from "./lib/monitor.js";
+export { RoomType } from "./lib/room";
+export type { Room } from "./lib/room";
+export { DeviceType } from "./lib/device";
+export type { Device } from "./lib/device";
+export type { ColonelRoyClient } from "./lib/monitor";

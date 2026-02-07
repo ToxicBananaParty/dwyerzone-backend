@@ -6,8 +6,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc -b",
-    "build-deps": "tsc --project packages/common",
+    "build": "npm run -w @smarthome/common build && npm run -w @smarthome/solid-snake build && npm run -w @smarthome/colonel-roy build && npm run -w @smarthome/big-boss build && npm run -w @smarthome/the-boss build",
+    "build-deps": "npm run -w @smarthome/common build",
     "format": "prettier --log-level warn --config .prettierrc --ignore-path .prettierignore --write packages/",
     "lint": "prettier --check --log-level warn --config .prettierrc --ignore-path .prettierignore packages/ && eslint packages/ --max-warnings=0 --config eslint.config.js --cache",
     "prepare": "husky"
@@ -31,6 +31,8 @@
     "husky": "^9.1.7",
     "lint-staged": "^15.5.2",
     "prettier": "^3.6.2",
+    "tsup": "^8.5.1",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.45.0"
   },

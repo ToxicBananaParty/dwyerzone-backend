@@ -1,4 +1,4 @@
-import startMonitor from "./monitor.js";
-//import rooms from "./rooms/index.js";
+import startMonitor from "./monitor";
+//import rooms from "./rooms/index";
 
 startMonitor();

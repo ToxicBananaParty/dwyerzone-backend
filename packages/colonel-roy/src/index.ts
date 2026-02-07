@@ -2,7 +2,7 @@ import { COLONEL_ROY_PORT } from "@smarthome/common";
 import { type ColonelRoyClient } from "@smarthome/common";
 import { createServer } from "http";
 import { Server } from "socket.io";
-import { registerClient } from "./client.js";
+import { registerClient } from "./client";
 
 const server = createServer();
 const io = new Server(server);

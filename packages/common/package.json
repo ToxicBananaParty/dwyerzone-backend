@@ -7,18 +7,6 @@
         ".": {
             "types": "./dist/index.d.ts",
             "default": "./dist/index.js"
-        },
-        "./lib/device": {
-            "types": "./dist/lib/device.d.ts",
-            "default": "./dist/lib/device.js"
-        },
-        "./lib/monitor": {
-            "types": "./dist/lib/monitor.d.ts",
-            "default": "./dist/lib/monitor.js"
-        },
-        "./lib/room": {
-            "types": "./dist/lib/room.d.ts",
-            "default": "./dist/lib/room.js"
         }
     },
     "files": [
@@ -26,6 +14,7 @@
     ],
     "type": "module",
     "scripts": {
+        "build": "tsup src/index.ts --format esm --dts --out-dir dist --clean --tsconfig tsconfig.build.json",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],

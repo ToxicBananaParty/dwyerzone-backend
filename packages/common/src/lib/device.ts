@@ -1,4 +1,4 @@
-import type { Room } from "./room.js";
+import type { Room } from "./room";
 
 export enum DeviceType {
     Speaker = "SPEAKER",
@@ -17,5 +17,3 @@ export type Device = {
     readonly id: string;
     readonly controller?: Device;
 };
-
-export default DeviceType;

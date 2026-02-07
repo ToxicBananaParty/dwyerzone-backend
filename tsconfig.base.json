@@ -4,9 +4,9 @@
         "skipLibCheck": true,
 
         "verbatimModuleSyntax": true,
-        "module": "node16",
+        "module": "esnext",
         "moduleDetection": "force",
-        "moduleResolution": "node16",
+        "moduleResolution": "bundler",
         "baseUrl": ".",
         "paths": {
             "@smarthome/common": ["packages/common/src/index.ts"],
