@@ -1,5 +1,5 @@
 import { COLONEL_ROY_PORT } from "@smarthome/common";
-import { type ColonelRoyClient } from "@smarthome/common/dist/lib/monitor.js";
+import { type ColonelRoyClient } from "@smarthome/common";
 import { createServer } from "http";
 import { Server } from "socket.io";
 import { registerClient } from "./client.js";
@@ -23,7 +23,10 @@ io.on("connection", (socket) => {
         console.log(
             `Snake! This is the Colonel.... ${clientInfo.name} has registered successfully!`,
         );
-        callback();
+
+        if (callback && typeof callback === "function") {
+            callback();
+        }
     });
 });
 

@@ -1,6 +1,6 @@
 import { io } from "socket.io-client";
 import { MONITOR_ADDR } from "@smarthome/common";
-import { type ColonelRoyClient } from "@smarthome/common/dist/lib/monitor.js";
+import { type ColonelRoyClient } from "@smarthome/common";
 
 export const startMonitor = () => {
     const clientInfo: ColonelRoyClient = {

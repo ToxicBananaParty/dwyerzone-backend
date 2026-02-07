@@ -1,4 +1,4 @@
-import { type ColonelRoyClient } from "@smarthome/common/dist/lib/monitor.js";
+import { type ColonelRoyClient } from "@smarthome/common";
 
 export const registerClient = (clientInfo: ColonelRoyClient) => {
     console.log(
