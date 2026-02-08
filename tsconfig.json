@@ -2,14 +2,14 @@
     "files": [],
     "include": ["./eslint.config.js"],
     "references": [{
-        "path": "packages/big-boss"
+        "path": "apps/big-boss"
     }, {
-        "path": "packages/solid-snake"
+        "path": "apps/solid-snake"
     }, {
-        "path": "packages/the-boss"
+        "path": "apps/the-boss"
     }, {
-        "path": "packages/colonel-roy"
+        "path": "apps/colonel-roy"
     }, {
-        "path": "packages/common"
+        "path": "apps/common"
     }]
 }

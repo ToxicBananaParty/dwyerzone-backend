@@ -16,11 +16,11 @@ build-deps:
 build: build-deps
 	npm run build
 
-start-roy start-colonel-roy roy: build
-	node ./packages/colonel-roy/dist/index.js
+start-roy start-colonel-roy roy:
+	npm run -w @smarthome/colonel-roy dev
 
-start-solid-snake start-snake snake: build
-	node ./packages/solid-snake/dist/index.js
+start-solid-snake start-snake snake:
+	npm run -w @smarthome/solid-snake dev
 
-start-big-boss big-boss: build
-	node ./packages/big-boss/dist/index.js
+start-big-boss big-boss:
+	npm run -w @smarthome/big-boss dev

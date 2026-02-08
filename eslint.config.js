@@ -4,7 +4,7 @@ import prettierConfig from "eslint-config-prettier";
 import prettierPlugin from "eslint-plugin-prettier";
 
 export default tseslint.config(
-    { ignores: ["./packages/*/dist"] },
+    { ignores: ["./apps/*/dist"] },
     {
         extends: [
             js.configs.recommended,
@@ -16,7 +16,7 @@ export default tseslint.config(
             parserOptions: {
                 tsconfigRootDir: import.meta.dirname,
                 projectService: {
-                    allowDefaultProject: ["./eslint.config.js"],
+                    allowDefaultProject: ["eslint.config.js"],
                     defaultProject: "./tsconfig.base.json",
                 },
             },

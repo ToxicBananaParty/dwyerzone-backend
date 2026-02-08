@@ -8,8 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run -w @smarthome/common build && npm run -w @smarthome/solid-snake build && npm run -w @smarthome/colonel-roy build && npm run -w @smarthome/big-boss build && npm run -w @smarthome/the-boss build",
     "build-deps": "npm run -w @smarthome/common build",
-    "format": "prettier --log-level warn --config .prettierrc --ignore-path .prettierignore --write packages/",
-    "lint": "prettier --check --log-level warn --config .prettierrc --ignore-path .prettierignore packages/ && eslint packages/ --max-warnings=0 --config eslint.config.js --cache",
+    "format": "prettier --log-level warn --config .prettierrc --ignore-path .prettierignore --write apps/",
+    "lint": "prettier --check --log-level warn --config .prettierrc --ignore-path .prettierignore apps/ && eslint apps/ --max-warnings=0 --config eslint.config.js --cache",
     "prepare": "husky"
   },
   "keywords": [],
@@ -17,11 +17,11 @@
   "license": "ISC",
   "description": "",
   "workspaces": [
-    "packages/solid-snake",
-    "packages/big-boss",
-    "packages/the-boss",
-    "packages/colonel-roy",
-    "packages/common"
+    "apps/solid-snake",
+    "apps/big-boss",
+    "apps/the-boss",
+    "apps/colonel-roy",
+    "apps/common"
   ],
   "devDependencies": {
     "@eslint/js": "^9.36.0",
