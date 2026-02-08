@@ -1,9 +1,7 @@
 {
 	"folders": [
 		{
-			"path": "../../.."
-		},
-		{
+			"name": "dwyerzone-backend",
 			"path": "."
 		}
 	],
@@ -17,6 +15,7 @@
 			"**/node_modules": true,
 			"**/dist": true,
 			".husky": true,
+			".eslintcache": true,
 			"**/*.tsbuildinfo": true
 		}
 	}
