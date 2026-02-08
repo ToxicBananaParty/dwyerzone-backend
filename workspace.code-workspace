@@ -16,7 +16,8 @@
 			"**/Thumbs.db": true,
 			"**/node_modules": true,
 			"**/dist": true,
-			".husky": true
+			".husky": true,
+			"**/*.tsbuildinfo": true
 		}
 	}
 }
