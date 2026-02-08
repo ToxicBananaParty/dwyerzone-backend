@@ -1,9 +1,7 @@
-import { type ColonelRoyClient } from "@smarthome/common";
-
-export type RegisteredClient = ColonelRoyClient & {
-    id: string;
-    connectedAt: string;
-};
+import {
+    type ColonelRoyClient,
+    type RegisteredClient,
+} from "@smarthome/common";
 
 const clients = new Map<string, RegisteredClient>();
 

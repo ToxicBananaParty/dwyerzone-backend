@@ -10,4 +10,8 @@ export { RoomType } from "./lib/room";
 export type { Room } from "./lib/room";
 export { DeviceType } from "./lib/device";
 export type { Device } from "./lib/device";
-export type { ColonelRoyClient } from "./lib/monitor";
+export type {
+    ColonelRoyClient,
+    RegisteredClient,
+    RegisterCallback,
+} from "./lib/monitor";
