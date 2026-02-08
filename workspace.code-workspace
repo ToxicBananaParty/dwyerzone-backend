@@ -17,6 +17,7 @@
 			".husky": true,
 			".eslintcache": true,
 			"**/*.tsbuildinfo": true
-		}
+		},
+		"makefile.configureOnOpen": false
 	}
 }
