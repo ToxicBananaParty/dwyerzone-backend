@@ -2,7 +2,7 @@ import { COLONEL_ROY_PORT } from "@smarthome/common";
 import { type ColonelRoyClient } from "@smarthome/common";
 import { createServer } from "http";
 import { Server } from "socket.io";
-import { registerClient } from "./client";
+import { registerClient, unregisterClient } from "./client";
 
 const server = createServer();
 const io = new Server(server);
@@ -13,19 +13,20 @@ io.on("connection", (socket) => {
     );
 
     socket.on("disconnect", () => {
+        unregisterClient(socket.id);
         console.log(
             "Snake! This is the Colonel.... A connection has been terminated",
         );
     });
 
     socket.on("register", (clientInfo: ColonelRoyClient, callback) => {
-        registerClient(clientInfo);
+        const registeredClient = registerClient(clientInfo, socket.id);
         console.log(
-            `Snake! This is the Colonel.... ${clientInfo.name} has registered successfully!`,
+            `Snake! This is the Colonel.... ${registeredClient.name} has registered successfully!`,
         );
 
         if (callback && typeof callback === "function") {
-            callback();
+            callback(registeredClient);
         }
     });
 });
