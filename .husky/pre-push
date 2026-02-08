@@ -1,2 +1,14 @@
-make lint
-make build
+# Define the directory you want to monitor
+TARGET_DIR="apps/"
+
+# Get the name of the current branch
+currentBranch=$(git rev-parse --abbrev-ref HEAD)
+
+# Check if there are changes in the target directory between the current HEAD and the remote's HEAD
+if git diff-tree --no-commit-id --name-only -r HEAD..origin/$currentBranch | grep -q "$TARGET_DIR"; then
+  echo "Changes detected in $TARGET_DIR. Running lint and build..."
+  make lint
+  make build
+else
+  echo "No changes in apps directory. Skipping lint and build..."
+fi
