@@ -5,7 +5,9 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
     "build": "npm run -w @smarthome/common build && npm run -w @smarthome/solid-snake build && npm run -w @smarthome/colonel-roy build && npm run -w @smarthome/big-boss build && npm run -w @smarthome/the-boss build",
     "build-deps": "npm run -w @smarthome/common build",
     "format": "prettier --log-level warn --config .prettierrc --ignore-path .prettierignore --write apps/",
@@ -25,16 +27,20 @@
   ],
   "devDependencies": {
     "@eslint/js": "^9.36.0",
+    "@types/supertest": "^6.0.3",
     "eslint": "^9.36.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.2",
     "prettier": "^3.6.2",
+    "supertest": "^7.1.5",
     "tsup": "^8.5.1",
     "tsx": "^4.21.0",
     "typescript": "^5.9.2",
-    "typescript-eslint": "^8.45.0"
+    "typescript-eslint": "^8.45.0",
+    "vitest": "^3.2.4",
+    "@vitest/coverage-v8": "^3.2.4"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
