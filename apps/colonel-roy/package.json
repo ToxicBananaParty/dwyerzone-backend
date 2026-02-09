@@ -19,9 +19,9 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
-    "author": "",
+    "author": "Ryan Dwyer",
     "license": "ISC",
-    "description": "",
+    "description": "Monitoring and Telemetry for the Smart Home (Devices + Apps)",
     "dependencies": {
         "@smarthome/common": "^1.0.0",
         "socket.io": "^4.8.1"
